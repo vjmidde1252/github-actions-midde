@@ -8,3 +8,8 @@ jobs:
     steps:
       - name: echo statement
         run: echo "Hello Midde" 
+      - name: second multiple statements 
+        run: |
+          echo "Hello Midde file " > myfile.txt
+          cat myfile.txt
+          rm -rf myfile.txt
