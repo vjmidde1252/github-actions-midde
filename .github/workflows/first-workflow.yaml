@@ -13,3 +13,10 @@ jobs:
           echo "Hello Midde file " > myfile.txt
           cat myfile.txt
           rm -rf myfile.txt
+
+  my-second-job:
+    runs-on: windows
+    needs: my-first-job
+    steps:
+      - name: windows-steps
+        run: Write-Output "Windows System"
