@@ -36,7 +36,6 @@ resource "aws_route_table" "rtb" {
     Name = "Main routetable"
   }
 }
-
 resource "aws_route_table_association" "rtb_assc" {
   subnet_id      = aws_subnet.main.id
   route_table_id = aws_route_table.rtb.id
